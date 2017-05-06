@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.gom.tools.mytools.battery.Activity_Battery;
 import com.gom.tools.mytools.browes.Activity_browes;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
     public void onclick_openBrowes (View view){
         Intent intent=new Intent();
         intent.setClass(MainActivity.this,Activity_browes.class);
+        startActivity(intent);
+    }
+
+    public void onclick_showInfo (View view){
+        Intent intent=new Intent();
+        intent.setClass(MainActivity.this,Activity_Battery.class);
         startActivity(intent);
     }
 }
